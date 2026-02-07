@@ -9,9 +9,18 @@ trigger:
 pool:
   name: Default
 
+variables:
+  appName: 'demo-web-app'
+
 steps:
 - script: |
-    echo "Azure DevOps pipeline is running!"
-    echo "Repo: devops-prep (GitHub)"
-    echo "Practising CI/CD for client interview"
-  displayName: 'Run simple CI script'
+    echo "=== BUILD STAGE ==="
+    echo "Building $(appName)..."
+    echo "Simulating build (no real compile yet)"
+  displayName: 'Build application'
+
+- script: |
+    echo "=== TEST STAGE ==="
+    echo "Running unit tests for $(appName)..."
+    echo "All tests passed (simulated)"
+  displayName: 'Run tests'
