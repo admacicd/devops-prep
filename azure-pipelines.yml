@@ -11,16 +11,22 @@ pool:
 
 variables:
   appName: 'demo-web-app-v2'
+  buildConfiguration: 'Release'
 
 steps:
+# Build section
 - script: |
     echo "=== BUILD STAGE ==="
-    echo "Building $(appName)..."
-    echo "Simulating build (no real compile yet)"
+    echo "Application: $(appName)"
+    echo "Configuration: $(buildConfiguration)"
+    echo "Restoring dependencies..."
+    echo "Building $(appName) in $(buildConfiguration) mode..."
+    echo "[SIMULATION] Build succeeded."
   displayName: 'Build application'
 
+# Test section
 - script: |
     echo "=== TEST STAGE ==="
     echo "Running unit tests for $(appName)..."
-    echo "All tests passed (simulated)"
-  displayName: 'Run tests'
+    echo "[SIMULATION] All unit tests passed."
+  displayName: 'Run unit tests'
