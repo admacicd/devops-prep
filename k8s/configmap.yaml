@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-nginx-config
+data:
+  WELCOME_MESSAGE: "Hello from Kubernetes ConfigMap"
+

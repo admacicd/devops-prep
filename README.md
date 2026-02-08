@@ -35,3 +35,10 @@ All work done on my personal Linux system as real hands-on practice.
 - Configured a host directory (`/home/raj/Work/pgdata`) as a volume so database data persists even if the container is stopped and recreated.
 - Ran commands/scripts from the host that execute SQL against the Postgres container, simulating a simple “app → database container” flow.
 
+### Step 3 – Kubernetes Basics (Conceptual – hands-on pending Minikube setup)
+
+- Added basic Kubernetes manifests under `k8s/` for a simple `hello-nginx` app (`deployment.yaml`, `service.yaml`, `configmap.yaml`).
+- Used a ConfigMap + environment variable to keep `WELCOME_MESSAGE` config separate from the `nginx` image.
+- Walked through how to deploy and debug with `kubectl apply`, `kubectl get`, `kubectl describe`, and `kubectl logs`.
+- Built a high-level understanding of Service types: `ClusterIP` for internal-only access, `NodePort`/`LoadBalancer` for external access in real clusters.
+
